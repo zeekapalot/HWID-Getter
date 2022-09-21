@@ -1,0 +1,12 @@
+local Request = syn and syn.request or http and http.request
+local Players = game:GetService("Players").LocalPlayer
+
+local Response = Request({
+    Url = "https://ballisticpanel.000webhostapp.com/get.php?user=" .. Players.Name,
+    Method = "GET"
+})
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Azari System's";
+    Text = "Succesfully got HWID!";
+})
